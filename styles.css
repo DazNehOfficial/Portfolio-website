@@ -16,10 +16,27 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    min-width: 100%; 
+    min-height: 100%; 
+    width: auto; 
+    height: auto; 
+    z-index: 1; 
+    transform: translate(-50%, -50%); 
 }
 
 .content {
-    text-align: center;
+    position: relative; 
+    z-index: 2; 
+    color: white; 
+    text-align: center; 
 }
 
 h1 {
@@ -101,7 +118,6 @@ h2 {
 }
 
 #projects { background-color: rgb(26,26,26); } 
-#contact { background-color: rgb(26,26,26);}
 
 social-icons {
     display: flex; 
@@ -198,7 +214,7 @@ social-icons {
 
 .about-me-section h2 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .about-me-section p {
@@ -211,7 +227,9 @@ social-icons {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Responsive grid */
     gap: 20px; /* Space between grid items */
-    margin-left: 350px;
+    display: flex; 
+    flex-wrap: nowrap; 
+    justify-content: center; 
     margin-top: 20px;
 }
 
