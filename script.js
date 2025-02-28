@@ -59,3 +59,18 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('scroll', checkVisibility);
     checkVisibility(); // Initial check on page load
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const skillItems = document.querySelectorAll('.skill-item');
+
+    // Animate each skill item on entrance
+    skillItems.forEach((item, index) => {
+        gsap.from(item, {
+            opacity: 0,
+            y: 20,
+            duration: 0.5,
+            delay: index * 0.1, // Stagger the entrance
+            ease: "power2.out"
+        });
+    });
+});
